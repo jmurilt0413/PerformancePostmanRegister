@@ -9,7 +9,7 @@ import io.gatling.http.Predef.*
 
 object UnRegisterUser {
 
-  val unRegisterUser: ChainBuilder =
+  val postunRegisterUser: ChainBuilder =
     exec(
       http("Post - Unregister user")
         .post(unRegisterUserPath)

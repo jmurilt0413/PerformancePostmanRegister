@@ -2,7 +2,7 @@ package company.com.simulation
 
 import company.com.requests.GetName.getNameUser
 import company.com.requests.RegisterUser.PostRegisterUser
-import company.com.requests.UnRegisterUser.unRegisterUser
+import company.com.requests.UnRegisterUser.postunRegisterUser
 import company.com.utils.SimulationBase
 import io.gatling.core.Predef.*
 import io.gatling.core.structure.{PopulationBuilder, ScenarioBuilder}
@@ -13,7 +13,7 @@ class RegisterUserSimulation extends SimulationBase {
     scenario("User Register with API Postman")
       .exec(PostRegisterUser)
       .exec(getNameUser)
-      .exec(unRegisterUser)
+      .exec(postunRegisterUser)
 
   val setUpRegisterUserSimulation: PopulationBuilder = registerUser.inject(atOnceUsers(1))
 
