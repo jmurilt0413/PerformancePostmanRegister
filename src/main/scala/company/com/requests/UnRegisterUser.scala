@@ -14,7 +14,7 @@ object UnRegisterUser {
       http("Post - Unregister user")
         .post(unRegisterUserPath)
         .headers(headers.updated(contentTypeKey, contentTypeValue) )
-        .body(ElFileBody("company/com/bodies/unregister.txt"))
+        .body(ElFileBody("company/com/resources/bodies/unregister.txt"))
         .check(status is 200)
     )
 
